@@ -48,7 +48,7 @@ export default function Home() {
             </nav>
             {/* Slide Show */}
             <div className="">
-               <div className="relative w-full h-[300px]">
+               <div className="relative w-full h-75">
                   <Image src={slide[0]} alt="Slide Show" fill className="object-cover object-center" />
                </div>
             </div>
