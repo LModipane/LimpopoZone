@@ -29,10 +29,26 @@ export default function Home() {
                <button className="shrink-0 text-[10px] text-[#ff4444] font-extrabold bg-none border-[#cc0000] border py-1 rounded-md px-2.25 mr-2 leading-none whitespace-nowrap cursor-pointer">
                   ⚙ ADMIN
                </button>
+               <button className="flex items-center justify-center background-none border-[#FFFFFF3F] rounded-md py-1.5 px-2 cursor-pointer">
+                  <svg
+                     width="16"
+                     height="16"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="#fff"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  >
+                     <line x1="3" y1="6" x2="21" y2="6"></line>
+                     <line x1="3" y1="12" x2="21" y2="12"></line>
+                     <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+               </button>
             </nav>
             {/* Slide Show */}
             <div className="">
-               <div className="relative">
+               <div className="relative w-full h-[300px]">
                   <Image src={slide[0]} alt="Slide Show" fill className="object-cover object-center" />
                </div>
             </div>
