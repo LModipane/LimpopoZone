@@ -4,8 +4,8 @@ import { SlideShow } from "../components/index";
 
 type ExploreOption = {
    title: string;
-   description: string;
    gradient: string;
+   description: string;
 };
 
 const ExploreOptions: ExploreOption[] = [
@@ -83,9 +83,7 @@ export default function Home() {
                <span aria-hidden="true" className="pointer-events-none absolute -right-5 -top-5 h-20 w-20 rounded-full bg-white/[0.08]" />
                <div className="relative z-10">
                   <p className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px] text-white/65">Limpopo, South Africa</p>
-
                   <h2 className="text-xl font-black leading-tight text-white">Limpopo Football</h2>
-
                   <p className="mt-[3px] text-[10px] text-white/60">
                      {5} competition
                      {/* {5 !== 1 ? "s" : ""} */}
@@ -118,6 +116,120 @@ export default function Home() {
                </button>
             </div>
          </section>
+         <footer className="relative -mx-[14px] -mb-[10px] mt-8 overflow-hidden rounded-t-[20px] bg-gradient-to-b from-[#0d1117] to-[#060910]">
+            {/* Top accent line */}
+            <div className="h-[3px] w-full bg-gradient-to-r from-transparent via-[#CC0000] via-50% to-transparent" />
+            <div className="px-[22px] pb-[26px] pt-[30px]">
+               {/* Brand */}
+               <div className="mb-[26px] text-center">
+                  <div className="mb-2 inline-flex items-baseline gap-px font-[Arial,sans-serif] text-[26px] font-black tracking-[0.5px]">
+                     <span className="text-white">LIMP</span>
+                     <span className="text-[#CC0000]">ZONE</span>
+                  </div>
+                  <p className="text-[9px] uppercase tracking-[3px] text-[#374151]">Your Local Football Hub</p>
+               </div>
+
+               {/* Divider with dot */}
+               <div className="mb-5 flex items-center gap-2.5">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#1f2937]" />
+                  <span className="h-[5px] w-[5px] rounded-full bg-[#CC0000]" />
+                  <div className="h-px flex-1 bg-gradient-to-r from-[#1f2937] to-transparent " />
+               </div>
+
+               {/* Quick Navigation */}
+               <nav
+                  aria-label="Footer navigation"
+                  className="
+            mb-[26px] flex flex-wrap
+            justify-center gap-[7px]
+          "
+               >
+                  {/* {navLinks.map((link) => (
+                     <button
+                        key={link.id}
+                        type="button"
+                        className="
+                rounded-lg border border-[#1f2937]
+                bg-[#111827] px-[13px] py-[7px]
+                text-[10px] font-semibold text-[#9ca3af]
+                transition-all duration-150
+                hover:border-[#CC0000]
+                hover:bg-[#1a0000]
+                hover:text-white
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-[#CC0000]
+              "
+                     >
+                        {link.label}
+                     </button>
+                  ))} */}
+               </nav>
+
+               {/* Action Buttons */}
+               <div className="mb-[26px] flex flex-col items-center gap-3">
+                  {/* Club Manager */}
+                  <button
+                     type="button"
+                     className="rounded-[10px] bg-white px-[38px] py-[13px] text-center text-sm font-black tracking-[0.4px] text-[#CC0000] shadow-[0_2px_6px_rgba(0,0,0,0.3)] transition-opacity duration-150 hover:opacity-[0.88] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CC0000]"
+                  >
+                     Club Manager
+                  </button>
+
+                  {/* Update the Game */}
+                  <button
+                     type="button"
+                     className="rounded-[10px] border-[1.5px] border-white bg-black px-[30px] py-[10px] text-center text-xs font-extrabold tracking-[0.4px] text-white transition-opacity duration-150 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                     Update the Game
+                  </button>
+               </div>
+
+               {/* Social Media - only rendered when links exist */}
+               {/* {hasSocialLinks && (
+                  <div className="mb-[26px]">
+                     <p className="mb-[14px] text-center text-[8px] uppercase tracking-[2.5px] text-[#374151]">Follow Us</p>
+
+                     <div className="flex justify-center gap-2.5">
+                        {Object.entries(socialLinks)
+                           .filter(([, url]) => url.trim() !== "")
+                           .map(([platform, url]) => (
+                              <a
+                                 key={platform}
+                                 href={url}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 aria-label={platform}
+                                 className="
+                      flex h-9 w-9 items-center
+                      justify-center rounded-[10px]
+                      border border-[#2d2d2d]
+                      bg-[#111827] text-white
+                      transition-transform duration-150
+                      hover:-translate-y-0.5
+                    "
+                              >
+                                 {platform}
+                              </a>
+                           ))}
+                     </div>
+                  </div>
+               )} */}
+
+               {/* Bottom Divider */}
+               <div className="mb-4 h-px bg-gradient-to-r from-transparent via-[#1f2937] to-transparent" />
+
+               {/* Copyright */}
+               <div className="text-center">
+                  <p className="text-[10px] text-[#374151]">
+                     © 2025/26 <span className="font-bold text-[#CC0000]">Limp</span>
+                     <span className="font-bold text-[#e5e5e5]">Zone</span> · All rights reserved
+                  </p>
+
+                  <p className="mt-[5px] text-[9px] tracking-[0.5px] text-[#1f2937]">Built for local football</p>
+               </div>
+            </div>
+         </footer>
       </main>
    );
 }
