@@ -75,6 +75,49 @@ export default function Home() {
                ))}
             </div>
          </section>
+         {/* Competitions */}
+         <section className="w-full">
+            {/* Province Header */}
+            <div className="relative mb-[14px] overflow-hidden rounded-[14px] bg-[#CC0000] px-4 pb-[14px] pt-4">
+               {/* Decorative circle */}
+               <span aria-hidden="true" className="pointer-events-none absolute -right-5 -top-5 h-20 w-20 rounded-full bg-white/[0.08]" />
+               <div className="relative z-10">
+                  <p className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px] text-white/65">Limpopo, South Africa</p>
+
+                  <h2 className="text-xl font-black leading-tight text-white">Limpopo Football</h2>
+
+                  <p className="mt-[3px] text-[10px] text-white/60">
+                     {5} competition
+                     {/* {5 !== 1 ? "s" : ""} */}
+                  </p>
+               </div>
+            </div>
+
+            {/* Competition Cards */}
+            <div className="flex flex-col gap-2">
+               <button
+                  type="button"
+                  className="group flex w-full min-w-0 items-center gap-2.5 rounded-xl border border-[#EEEEEE] bg-white px-[14px] py-3 text-left shadow-[0_1px_6px_rgba(0,0,0,0.04)] transition-shadow duration-150 hover:shadow-[0_4px_14px_rgba(0,0,0,0.10)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+               >
+                  {/* Competition Information */}
+                  <span className="min-w-0 flex-1">
+                     <span className="block truncate text-[13px] font-bold text-[#111111]">bob</span>
+                  </span>
+
+                  {/* Navigation Indicator */}
+                  <span
+                     aria-hidden="true"
+                     className="
+                  shrink-0 text-base text-[#DDDDDD]
+                  transition-transform duration-150
+                  group-hover:translate-x-0.5
+                "
+                  >
+                     &rarr; {/** Replace with lucide icon */}
+                  </span>
+               </button>
+            </div>
+         </section>
       </main>
    );
 }
