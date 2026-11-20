@@ -1,5 +1,5 @@
-import Image from "next/image";
-import slide from "../assets/slideShow";
+import slides from "../assets/slideShow";
+import { SlideShow } from "../components/index";
 
 export default function Home() {
    return (
@@ -36,9 +36,9 @@ export default function Home() {
                      viewBox="0 0 24 24"
                      fill="none"
                      stroke="#fff"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
+                     strokeWidth="2"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
                   >
                      <line x1="3" y1="6" x2="21" y2="6"></line>
                      <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -48,9 +48,7 @@ export default function Home() {
             </nav>
             {/* Slide Show */}
             <div className="">
-               <div className="relative w-full h-75">
-                  <Image src={slide[0]} alt="Slide Show" fill className="object-cover object-center" />
-               </div>
+               <SlideShow slides={slides} />
             </div>
          </header>
       </main>
